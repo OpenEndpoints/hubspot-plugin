@@ -1,3 +1,4 @@
  <transformer data-source="hubspot-menu-items">
+	 <xslt-file name="data-source.xslt"/>
 	 <convert-output-xml-to-json/>
  </transformer>
