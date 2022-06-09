@@ -1,0 +1,3 @@
+ <transformer data-source="hubspot-menu-items">
+	 <convert-output-xml-to-json/>
+ </transformer>

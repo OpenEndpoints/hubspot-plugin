@@ -1,0 +1,5 @@
+<data-source>
+	<literal-xml>
+		<transaction-uuid>${request-id}</transaction-uuid>
+	</literal-xml>
+</data-source>

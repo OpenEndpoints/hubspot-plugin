@@ -1,0 +1,3 @@
+ <transformer data-source="error">
+ <xslt-file name="error-json.xslt"/>
+ </transformer>

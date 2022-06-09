@@ -1,0 +1,7 @@
+<data-source>
+	<literal-xml>
+		<transaction-uuid>${request-id}</transaction-uuid>
+		<internal-error>${internal-error-text}</internal-error>
+		<parameter-transformation-error>${parameter-transformation-error-text}</parameter-transformation-error>
+	</literal-xml>
+</data-source>

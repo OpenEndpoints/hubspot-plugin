@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint-folder>
+	
+
+	<endpoint name="hubspot-menu-items">
+		<success>
+			<response-transformation name="hubspot-menu-items-json"/>
+		</success>
+		<error>
+			<response-transformation name="error-json"/>
+		</error>
+	</endpoint>		
+</endpoint-folder>
