@@ -9,7 +9,27 @@
 		</error>
 	</endpoint>	
 	
-	<endpoint name="download">
+	<endpoint name="hubspot-submit">
+		<success if="${action}" equals="email">
+			<response-transformation name="success-json"/>
+		</success>
+		<success if="${action}" equals="download">
+			<response-transformation name="download-url-json"/>
+		</success>		
+		<success>
+			<response-transformation name="success-json"/>		
+		</success>
+		<error>
+			<response-transformation name="error-json"/>
+		</error>
+			<task id="hubspot-link" 
+			class="endpoints.task.CreateShortLinkToEndpointTask" 
+			destination-endpoint-name="hubspot-download"
+			output-intermediate-value="hubspot-download"
+		  expires-in-minutes="1440"/>		
+	</endpoint>
+	
+	<endpoint name="hubspot-download">
 		<success>
 			<response-from-static filename="hello-world.pdf" download-filename="hello-world.pdf"/>
 		</success>

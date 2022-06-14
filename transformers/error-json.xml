@@ -1,3 +1,4 @@
  <transformer data-source="error">
  <xslt-file name="error-json.xslt"/>
+ <convert-output-xml-to-json/>
  </transformer>
