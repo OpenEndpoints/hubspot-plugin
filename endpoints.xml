@@ -13,6 +13,7 @@
 	</endpoint>	
 	
 	<endpoint name="hubspot-submit">
+		<parameter-transformation xslt="submit.xslt"/>
 		<success if="${action}" equals="email">
 			<response-transformation name="success-json"/>
 		</success>
