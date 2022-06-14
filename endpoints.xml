@@ -29,7 +29,9 @@
 			class="endpoints.task.CreateShortLinkToEndpointTask" 
 			destination-endpoint-name="hubspot-download"
 			output-intermediate-value="hubspot-download"
-		  expires-in-minutes="1440"/>		
+		  expires-in-minutes="1440"/>
+		  
+		  <task class="endpoints.task.RequestLogExpressionCaptureTask" key="Action" value="${action}" />		
 	</endpoint>
 	
 	<endpoint name="hubspot-download">
