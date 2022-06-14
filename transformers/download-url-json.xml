@@ -1,4 +1,3 @@
  <transformer data-source="parameters">
  <xslt-file name="download-url-json.xslt"/>
- <convert-output-xml-to-json/>
  </transformer>
