@@ -26,7 +26,7 @@
 		<error>
 			<response-transformation name="error-json"/>
 		</error>
-			<task id="hubspot-link" 
+		<task id="hubspot-link" 
 			class="endpoints.task.CreateShortLinkToEndpointTask" 
 			destination-endpoint-name="hubspot-download"
 			output-intermediate-value="hubspot-download"
