@@ -16,25 +16,49 @@
 	<endpoint name="hubspot-submit">
 		<!--<parameter-transformation xslt="submit.xslt"/>-->
 		<success>
-			<forward-to-endpoint endpoint-name="hubspot-submit-response"/>	
+			<forward-to-endpoint endpoint-name="hubspot-submit-download"/>	
 		</success>
+		<success>
+			<forward-to-endpoint endpoint-name="hubspot-submit-email"/>	
+		</success>
+		<success>
+			<response-transformation name="success-json"/>		
+		</success>		
 		<error>
 			<response-transformation name="error-json"/>
 		</error>
-		<task id="hubspot-link" class="endpoints.task.CreateShortLinkToEndpointTask" destination-endpoint-name="hubspot-download" output-intermediate-value="hubspot-download" expires-in-minutes="1440"/>
 	</endpoint>
-	<endpoint name="hubspot-submit-response">
+	
+	
+	<endpoint name="hubspot-submit-download">
 		<parameter-transformation xslt="submit-response.xslt"/>
 		<success>
+			<input-intermediate-value name="hubspot-download"/>
 			<response-transformation name="success-json"/>		
 		</success>
 		<error>
 			<response-transformation name="error-json"/>
 		</error>	
 	
+		<task class="endpoints.task.CreateShortLinkToEndpointTask" destination-endpoint-name="hubspot-download" output-intermediate-value="hubspot-download" expires-in-minutes="1440"/>
+	
 		<task class="endpoints.task.RequestLogExpressionCaptureTask" key="Action" value="${action}" />
-		<task class="endpoints.task.RequestLogExpressionCaptureTask" key="Shortlink" value="${shortlink}" />	
+		<task class="endpoints.task.RequestLogExpressionCaptureTask" key="Shortlink" value="${hubspot-download}">
+			<input-intermediate-value name="hubspot-download"/>
+		</task>	
 	</endpoint>
+	
+	<endpoint name="hubspot-submit-email">
+		<success>
+			<response-transformation name="success-json"/>		
+		</success>
+		<error>
+			<response-transformation name="error-json"/>
+		</error>	
+
+		<task class="endpoints.task.RequestLogExpressionCaptureTask" key="Action" value="${action}" />
+
+	</endpoint>	
 	
 	<endpoint name="hubspot-download">
 		<success>
