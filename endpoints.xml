@@ -34,7 +34,7 @@
 		<parameter-transformation xslt="submit-response.xslt"/>
 		<success>
 			<input-intermediate-value name="hubspot-download"/>
-			<response-transformation name="success-json"/>		
+			<response-transformation name="download-url-json"/>		
 		</success>
 		<error>
 			<response-transformation name="error-json"/>
