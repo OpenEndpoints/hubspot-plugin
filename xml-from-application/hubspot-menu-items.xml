@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <menu>
-	<item scope="contact" action="foo" response="shortlink" caption="Generate Contract"/>
-	<item scope="company" action="bar" response="success" caption="Send Email with Sales Proposal"/>
+	<item scope="contact" action="download" response="shortlink" caption="Generate Contract"/>
+	<item scope="company" action="email" response="success" caption="Send Email with Sales Proposal"/>
 </menu>
