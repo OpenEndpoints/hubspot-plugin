@@ -5,12 +5,13 @@
 	<xsl:variable name="input" select="parameter-transformation-input"/>
 	<xsl:variable name="action">
 		<xsl:choose>
+			<xsl:when test="exists($input/input-from-request/json/action)">
+				<xsl:value-of select="$input/input-from-request/json/action[1]"/>
+			</xsl:when>		
 			<xsl:when test="exists($input/input-from-request/parameter[@name eq 'action'])">
 				<xsl:value-of select="$input/input-from-request/parameter[@name eq 'action']/@value"/>
 			</xsl:when>
-			<xsl:when test="exists($input/input-from-request/json/action)">
-				<xsl:value-of select="$input/input-from-request/json/action[1]"/>
-			</xsl:when>
+
 			<xsl:otherwise/>
 		</xsl:choose>
 	
@@ -19,7 +20,7 @@
 	<xsl:template match="/">
 		<parameter-transformation-output>
 			<parameter name="action">
-				<xsl:attribute name="value" select="parameter-transformation-input/input-from-request/parameter[@name eq 'action']/@value"/>
+				<xsl:attribute name="value" select="$action"/>
 			</parameter>
 		</parameter-transformation-output>
 	</xsl:template>
