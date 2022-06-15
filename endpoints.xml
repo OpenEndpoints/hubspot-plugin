@@ -21,7 +21,7 @@
 		<error>
 			<response-transformation name="error-json"/>
 		</error>
-		<task if="{action}" equals="download" id="hubspot-link" class="endpoints.task.CreateShortLinkToEndpointTask" destination-endpoint-name="hubspot-download" output-intermediate-value="hubspot-download" expires-in-minutes="1440"/>
+		<task id="hubspot-link" class="endpoints.task.CreateShortLinkToEndpointTask" destination-endpoint-name="hubspot-download" output-intermediate-value="hubspot-download" expires-in-minutes="1440"/>
 	</endpoint>
 	<endpoint name="hubspot-submit-response">
 		<parameter-transformation xslt="submit-response.xslt"/>
