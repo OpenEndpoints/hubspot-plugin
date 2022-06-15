@@ -1,3 +1,4 @@
  <transformer data-source="success">
 	<xslt-file name="success-email-json.xslt"/>
+	<convert-output-xml-to-json/>
  </transformer>

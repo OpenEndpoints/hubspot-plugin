@@ -1,4 +1,4 @@
  <transformer data-source="success">
-	<xslt-file name="success-json.xslt"/>
+	<xslt-file name="success-action-not-supported-json.xslt"/>
 	<convert-output-xml-to-json/>
  </transformer>

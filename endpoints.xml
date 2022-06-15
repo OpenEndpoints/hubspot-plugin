@@ -22,7 +22,7 @@
 			<forward-to-endpoint endpoint-name="hubspot-submit-email"/>	
 		</success>
 		<success>
-			<response-transformation name="success-json"/>		
+			<response-transformation name="success-action-not-supported-json"/>		
 		</success>		
 		<error>
 			<response-transformation name="error-json"/>
