@@ -41,11 +41,8 @@
 		</error>	
 	
 		<task class="endpoints.task.CreateShortLinkToEndpointTask" destination-endpoint-name="hubspot-download" output-intermediate-value="hubspot-download" expires-in-minutes="1440"/>
-	
 		<task class="endpoints.task.RequestLogExpressionCaptureTask" key="Action" value="${action}" />
-		<task class="endpoints.task.RequestLogExpressionCaptureTask" key="Shortlink" value="${hubspot-download}">
-			<input-intermediate-value name="hubspot-download"/>
-		</task>	
+
 	</endpoint>
 	
 	<endpoint name="hubspot-submit-email">
