@@ -14,7 +14,7 @@
 	</endpoint>	
 	
 	<endpoint name="hubspot-submit">
-		<!--<parameter-transformation xslt="submit.xslt"/>-->
+		<parameter-transformation xslt="submit.xslt"/>
 		<success if="${action}" equals="download">
 			<forward-to-endpoint endpoint-name="hubspot-submit-download"/>	
 		</success>

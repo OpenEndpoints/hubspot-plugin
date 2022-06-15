@@ -3,6 +3,18 @@
 	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 	<!-- Acknowledgement: xslt functions with namespace functx copied from http://www.xsltfunctions.com -->
 	<xsl:variable name="input" select="parameter-transformation-input"/>
+	<xsl:variable name="action">
+		<xsl:choose>
+			<xsl:when test="exists($input/input-from-request/parameter[@name eq 'action'])">
+				<xsl:value-of select="$input/input-from-request/parameter[@name eq 'action']/@value"/>
+			</xsl:when>
+			<xsl:when test="exists($input/input-from-request/json/action)">
+				<xsl:value-of select="$input/input-from-request/json/action[1]"/>
+			</xsl:when>
+			<xsl:otherwise/>
+		</xsl:choose>
+	
+	</xsl:variable>
 
 	<xsl:template match="/">
 		<parameter-transformation-output>
