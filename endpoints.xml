@@ -15,10 +15,10 @@
 	
 	<endpoint name="hubspot-submit">
 		<!--<parameter-transformation xslt="submit.xslt"/>-->
-		<success>
+		<success if="${action}" equals="download">
 			<forward-to-endpoint endpoint-name="hubspot-submit-download"/>	
 		</success>
-		<success>
+		<success if="${action}" equals="email">
 			<forward-to-endpoint endpoint-name="hubspot-submit-email"/>	
 		</success>
 		<success>
@@ -47,7 +47,7 @@
 	
 	<endpoint name="hubspot-submit-email">
 		<success>
-			<response-transformation name="success-json"/>		
+			<response-transformation name="success-email-json"/>		
 		</success>
 		<error>
 			<response-transformation name="error-json"/>
