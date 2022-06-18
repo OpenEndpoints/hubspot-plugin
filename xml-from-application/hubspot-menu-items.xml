@@ -2,4 +2,5 @@
 <menu>
 	<item scope="contact" action="download" response="shortlink" caption="Generate Contract"/>
 	<item scope="company" action="email" response="success" caption="Send Email with Sales Proposal"/>
+	<item scope="company" action="download" response="shortlink" caption="Yet another Contract"/>
 </menu>
