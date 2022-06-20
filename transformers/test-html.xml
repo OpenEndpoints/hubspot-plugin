@@ -1,0 +1,4 @@
+<transformer data-source="parameters" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://cdn.openendpoints.io/xsd/core/transformers/transformer.xsd">
+<xslt-file name="test-html.xslt"/>
+<content-type type="text/html; charset=utf-8"/>
+</transformer>

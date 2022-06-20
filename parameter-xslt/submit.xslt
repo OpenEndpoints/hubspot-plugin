@@ -22,6 +22,22 @@
 			<parameter name="action">
 				<xsl:attribute name="value" select="$action"/>
 			</parameter>
+			
+
+			<parameter name="company">
+				<xsl:attribute name="value" select="$input/input-from-request/json/properties/name"/>
+			</parameter>
+			<parameter name="firstname">
+				<xsl:attribute name="value" select="$input/input-from-request/json/properties/firstname"/>
+			</parameter>
+			<parameter name="lastname">
+				<xsl:attribute name="value" select="$input/input-from-request/json/properties/lastname"/>
+			</parameter>												
+			<parameter name="email">
+				<xsl:attribute name="value" select="$input/input-from-request/json/properties/email"/>
+			</parameter>	
+			
+									
 		</parameter-transformation-output>
 	</xsl:template>
 

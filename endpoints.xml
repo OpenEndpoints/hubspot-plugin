@@ -4,6 +4,13 @@
 <parameter name="action" default-value=""/>
 <parameter name="shortlink" default-value=""/>
 
+	<parameter name="company"/>
+	<parameter name="firstname"/>
+	<parameter name="lastname"/>												
+	<parameter name="email"/>
+
+
+
 	<endpoint name="hubspot-menu-items">
 		<success>
 			<response-transformation name="hubspot-menu-items-json"/>
@@ -59,7 +66,8 @@
 	
 	<endpoint name="hubspot-download">
 		<success>
-			<response-from-static filename="hello-world.pdf" download-filename="hello-world.pdf"/>
+			<!--<response-from-static filename="hello-world.pdf" download-filename="hello-world.pdf"/>-->
+			<response-transformation name="test-html"/>
 		</success>
 		<error>
 			<response-transformation name="error-json"/>
