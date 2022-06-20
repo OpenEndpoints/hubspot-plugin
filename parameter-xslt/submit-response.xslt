@@ -6,9 +6,7 @@
 
 	<xsl:template match="/">
 		<parameter-transformation-output>
-			<parameter name="action">
-				<xsl:attribute name="value" select="parameter-transformation-input/input-from-request/parameter[@name eq 'action']/@value"/>
-			</parameter>
+			<xsl:copy-of select="$input/input-from-request/parameter[@name ne 'shortlink']"/>
 			<parameter name="shortlink">
 				<xsl:attribute name="value" select="transformation-input/parameters/intermediate-value[@name eq 'hubspot-download']/@value"/>
 			</parameter>
