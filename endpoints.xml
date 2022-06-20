@@ -68,8 +68,8 @@
 	
 	<endpoint name="hubspot-download">
 		<success>
-			<response-from-static filename="hello-world.pdf" download-filename="hello-world.pdf"/>
-			<!--<response-transformation name="test-html"/>-->
+			<!--<response-from-static filename="hello-world.pdf" download-filename="hello-world.pdf"/>-->
+			<response-transformation name="test-html"/>
 		</success>
 		<error>
 			<response-transformation name="error-json"/>
