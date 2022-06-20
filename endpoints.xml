@@ -4,10 +4,10 @@
 <parameter name="action" default-value=""/>
 <parameter name="shortlink" default-value=""/>
 
-	<parameter name="company"/>
-	<parameter name="firstname"/>
-	<parameter name="lastname"/>												
-	<parameter name="email"/>
+	<parameter name="company" default-value=""/>
+	<parameter name="firstname" default-value=""/>
+	<parameter name="lastname" default-value=""/>												
+	<parameter name="email" default-value=""/>
 
 
 
