@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation-input>
+<parameters>
+<parameter name="firstname" value="martin"/>
+<parameter name="lastname" value="schmidt"/>
+<parameter name="company" value="Onestop Concept"/>
+</parameters>
+</transformation-input>
