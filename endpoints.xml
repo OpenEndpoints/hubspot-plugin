@@ -36,6 +36,7 @@
 		</error>
 	</endpoint>
 	
+
 	
 	<endpoint name="hubspot-submit-download">
 		<parameter-transformation xslt="submit-response.xslt"/>
@@ -52,6 +53,7 @@
 
 	</endpoint>
 	
+	
 	<endpoint name="hubspot-submit-email">
 		<success>
 			<response-transformation name="success-email-json"/>		
@@ -66,8 +68,8 @@
 	
 	<endpoint name="hubspot-download">
 		<success>
-			<!--<response-from-static filename="hello-world.pdf" download-filename="hello-world.pdf"/>-->
-			<response-transformation name="test-html"/>
+			<response-from-static filename="hello-world.pdf" download-filename="hello-world.pdf"/>
+			<!--<response-transformation name="test-html"/>-->
 		</success>
 		<error>
 			<response-transformation name="error-json"/>
